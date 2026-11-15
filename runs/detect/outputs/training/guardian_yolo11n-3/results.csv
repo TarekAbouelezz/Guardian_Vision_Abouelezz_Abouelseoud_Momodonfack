@@ -1,3 +1,4 @@
+# Guardian Vision YOLO11n training metrics log for the fine-tuned CARLA checkpoint
 epoch,time,train/box_loss,train/cls_loss,train/dfl_loss,metrics/precision(B),metrics/recall(B),metrics/mAP50(B),metrics/mAP50-95(B),val/box_loss,val/cls_loss,val/dfl_loss,lr/pg0,lr/pg1,lr/pg2
 1,3291.35,1.75338,5.81652,1.16583,0.87108,0.73513,0.82895,0.46273,1.30165,1.1844,0.90512,0.000666374,0.000666374,0.000666374
 2,6418.14,1.60647,1.17357,1.10332,0.89942,0.77934,0.85418,0.47995,1.28043,0.99595,0.90356,0.00130665,0.00130665,0.00130665
