@@ -1,3 +1,4 @@
+# Guardian Vision YOLO11n training run for the CARLA dataset
 task: detect
 mode: train
 model: yolo11n.pt
@@ -5,9 +6,9 @@ data: dataset\yolo\carla.yaml
 epochs: 50
 time: null
 patience: 100
-batch: 2
+batch:  2
 imgsz: 1280
-save: true
+save: true  
 save_period: -1
 cache: false
 device: cpu
