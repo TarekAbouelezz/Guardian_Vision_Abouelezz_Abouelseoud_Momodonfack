@@ -1,0 +1,15 @@
+Documentation-only follow-up status
+
+1. No source code, checkpoint, existing result file, or existing output was
+   modified.
+2. No training, validation sweep, depth-model experiment, or test rerun was
+   performed.
+3. The requested validation-only decision rule was recorded verbatim in
+   evaluation_protocol_addendum.md because the hard rule forbids modifying the
+   existing docs/evaluation_protocol.md.
+4. The older 91.96/61.95 mAP pair is explicitly marked superseded and
+   untrusted, consistent with the existing provenance artifact.
+5. Values without evidence artifacts are explicitly marked PENDING or Not
+   performed rather than estimated.
+6. No git command was run during this follow-up task, and nothing was
+   committed.

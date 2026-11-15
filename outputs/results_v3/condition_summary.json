@@ -1,0 +1,65 @@
+{
+  "train": {
+    "frames": 4580,
+    "weather": {
+      "clear_day": 990,
+      "fog": 1251,
+      "night": 1361,
+      "rain": 978
+    },
+    "day_night": {
+      "day_or_unspecified": 3219,
+      "night": 1361
+    },
+    "scenarios": {
+      "child_run": 827,
+      "group": 659,
+      "jaywalk_fast": 1019,
+      "occluded": 1338,
+      "walk_normal": 737
+    },
+    "sequences": 36
+  },
+  "validation": {
+    "frames": 993,
+    "weather": {
+      "clear_day": 469,
+      "fog": 201,
+      "night": 47,
+      "rain": 276
+    },
+    "day_night": {
+      "day_or_unspecified": 946,
+      "night": 47
+    },
+    "scenarios": {
+      "child_run": 76,
+      "group": 237,
+      "jaywalk_fast": 164,
+      "occluded": 109,
+      "walk_normal": 407
+    },
+    "sequences": 12
+  },
+  "test": {
+    "frames": 994,
+    "weather": {
+      "clear_day": 137,
+      "fog": 339,
+      "night": 286,
+      "rain": 232
+    },
+    "day_night": {
+      "day_or_unspecified": 708,
+      "night": 286
+    },
+    "scenarios": {
+      "child_run": 327,
+      "group": 294,
+      "jaywalk_fast": 108,
+      "occluded": 94,
+      "walk_normal": 171
+    },
+    "sequences": 12
+  }
+}

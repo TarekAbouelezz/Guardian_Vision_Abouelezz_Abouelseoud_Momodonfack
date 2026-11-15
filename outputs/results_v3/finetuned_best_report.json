@@ -1,0 +1,302 @@
+{
+  "model": "finetuned_best",
+  "confidence_threshold": 0.25,
+  "imgsz": 1280,
+  "iou_threshold": 0.5,
+  "metrics": {
+    "all_pedestrians": {
+      "true_positives": 1516,
+      "false_positives": 53,
+      "false_negatives": 276,
+      "precision": 0.9662205226258763,
+      "recall": 0.8459821428571429,
+      "f1": 0.9021124665278191,
+      "distance_mae_m": 3.400756671750405,
+      "distance_absrel": 0.15178284548686058,
+      "critical_zone_recall": 0.6,
+      "false_brake_per_object": 0.02676864244741874,
+      "false_brake_per_frame": 0.02112676056338028,
+      "mean_inference_ms": 53.4514923560315,
+      "frame_presence_accuracy": 0.9688128772635815,
+      "bootstrap_95_ci": {
+        "precision": [
+          0.9408347933140774,
+          0.982119477128764
+        ],
+        "recall": [
+          0.7791879993746245,
+          0.9120512121812656
+        ],
+        "f1": [
+          0.8623092113539189,
+          0.9404516857133804
+        ],
+        "distance_mae_m": [
+          2.7528629635327255,
+          4.087246402356464
+        ],
+        "distance_absrel": [
+          0.12018538640680237,
+          0.19171088390929925
+        ],
+        "critical_zone_recall": [
+          0.3893682399213373,
+          0.8507462686567164
+        ],
+        "false_brake_per_object": [
+          0.015601389357216172,
+          0.0363646705967525
+        ],
+        "false_brake_per_frame": [
+          0.012545263441534952,
+          0.030025104338890097
+        ]
+      }
+    },
+    "corridor_2.0m": {
+      "true_positives": 239,
+      "false_positives": 29,
+      "false_negatives": 35,
+      "precision": 0.8917910447761194,
+      "recall": 0.8722627737226277,
+      "f1": 0.8819188191881918,
+      "distance_mae_m": 1.4315916022854336,
+      "distance_absrel": 0.14309403738270726,
+      "critical_zone_recall": 0.5185185185185185,
+      "false_brake_per_object": 0.08208955223880597,
+      "false_brake_per_frame": 0.014084507042253521,
+      "mean_inference_ms": 53.4514923560315,
+      "frame_presence_accuracy": 0.9678068410462777,
+      "bootstrap_95_ci": {
+        "precision": [
+          0.8080080887553042,
+          0.9359042553191489
+        ],
+        "recall": [
+          0.721580876140588,
+          0.9768841283148745
+        ],
+        "f1": [
+          0.7861764460065191,
+          0.9465023910999059
+        ],
+        "distance_mae_m": [
+          1.0704178226074463,
+          2.1683466774435707
+        ],
+        "distance_absrel": [
+          0.10653653751723363,
+          0.24132669564856166
+        ],
+        "critical_zone_recall": [
+          NaN,
+          NaN
+        ],
+        "false_brake_per_object": [
+          0.03947206378014,
+          0.14285714285714285
+        ],
+        "false_brake_per_frame": [
+          0.0046937438584998365,
+          0.024495738056830085
+        ]
+      }
+    },
+    "distance_0-10m": {
+      "true_positives": 244,
+      "false_positives": 51,
+      "false_negatives": 90,
+      "precision": 0.8271186440677966,
+      "recall": 0.7305389221556886,
+      "f1": 0.7758346581875992,
+      "distance_mae_m": 0.920678770445843,
+      "distance_absrel": 0.13797570943020268,
+      "critical_zone_recall": 0.6,
+      "false_brake_per_object": 0.1423728813559322,
+      "false_brake_per_frame": 0.02112676056338028,
+      "mean_inference_ms": 53.4514923560315,
+      "frame_presence_accuracy": 0.9396378269617707,
+      "bootstrap_95_ci": {
+        "precision": [
+          0.7865765288087664,
+          0.8602633950232204
+        ],
+        "recall": [
+          0.5729928388448998,
+          0.9024412256757947
+        ],
+        "f1": [
+          0.6731893658364246,
+          0.867582088994375
+        ],
+        "distance_mae_m": [
+          0.7890090243358374,
+          1.2165505182352176
+        ],
+        "distance_absrel": [
+          0.11349421515516019,
+          0.19399832801253836
+        ],
+        "critical_zone_recall": [
+          0.3893682399213373,
+          0.8507462686567164
+        ],
+        "false_brake_per_object": [
+          0.1086041002850914,
+          0.1720017456359102
+        ],
+        "false_brake_per_frame": [
+          0.012545263441534952,
+          0.030025104338890097
+        ]
+      }
+    },
+    "distance_10-20m": {
+      "true_positives": 282,
+      "false_positives": 115,
+      "false_negatives": 98,
+      "precision": 0.7103274559193955,
+      "recall": 0.7421052631578947,
+      "f1": 0.725868725868726,
+      "distance_mae_m": 1.8506596889732632,
+      "distance_absrel": 0.12810247852023943,
+      "critical_zone_recall": NaN,
+      "false_brake_per_object": 0.0,
+      "false_brake_per_frame": 0.0,
+      "mean_inference_ms": 53.4514923560315,
+      "frame_presence_accuracy": 0.8762575452716298,
+      "bootstrap_95_ci": {
+        "precision": [
+          0.6389406948881788,
+          0.7705911418262852
+        ],
+        "recall": [
+          0.6525662764350453,
+          0.8069824201159984
+        ],
+        "f1": [
+          0.6549273057701045,
+          0.7823386011782698
+        ],
+        "distance_mae_m": [
+          1.5745750014177533,
+          2.1592208767660486
+        ],
+        "distance_absrel": [
+          0.1055728804586673,
+          0.1573012971891437
+        ],
+        "critical_zone_recall": [
+          NaN,
+          NaN
+        ],
+        "false_brake_per_object": [
+          0.0,
+          0.0
+        ],
+        "false_brake_per_frame": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "distance_20-30m": {
+      "true_positives": 286,
+      "false_positives": 125,
+      "false_negatives": 174,
+      "precision": 0.6958637469586375,
+      "recall": 0.6217391304347826,
+      "f1": 0.6567164179104478,
+      "distance_mae_m": 2.2797655143490707,
+      "distance_absrel": 0.08842419015370948,
+      "critical_zone_recall": NaN,
+      "false_brake_per_object": 0.0,
+      "false_brake_per_frame": 0.0,
+      "mean_inference_ms": 53.4514923560315,
+      "frame_presence_accuracy": 0.8712273641851107,
+      "bootstrap_95_ci": {
+        "precision": [
+          0.6026519031141868,
+          0.7626225481142181
+        ],
+        "recall": [
+          0.49863560919346217,
+          0.7636113602785984
+        ],
+        "f1": [
+          0.5529129029889108,
+          0.756112035897807
+        ],
+        "distance_mae_m": [
+          2.0974134374438216,
+          2.4316611636296477
+        ],
+        "distance_absrel": [
+          0.0808568230816785,
+          0.09438938617030691
+        ],
+        "critical_zone_recall": [
+          NaN,
+          NaN
+        ],
+        "false_brake_per_object": [
+          0.0,
+          0.0
+        ],
+        "false_brake_per_frame": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "distance_30+m": {
+      "true_positives": 376,
+      "false_positives": 90,
+      "false_negatives": 242,
+      "precision": 0.8068669527896996,
+      "recall": 0.6084142394822006,
+      "f1": 0.6937269372693727,
+      "distance_mae_m": 5.577952464391392,
+      "distance_absrel": 0.14532350035357505,
+      "critical_zone_recall": NaN,
+      "false_brake_per_object": 0.0,
+      "false_brake_per_frame": 0.0,
+      "mean_inference_ms": 53.4514923560315,
+      "frame_presence_accuracy": 0.9044265593561368,
+      "bootstrap_95_ci": {
+        "precision": [
+          0.700371465768545,
+          0.9194866257595615
+        ],
+        "recall": [
+          0.5178898782462131,
+          0.6927305194805194
+        ],
+        "f1": [
+          0.6180667877639131,
+          0.7632042902339811
+        ],
+        "distance_mae_m": [
+          4.491688300536262,
+          7.139596821315322
+        ],
+        "distance_absrel": [
+          0.11365159999806132,
+          0.19517301507754842
+        ],
+        "critical_zone_recall": [
+          NaN,
+          NaN
+        ],
+        "false_brake_per_object": [
+          0.0,
+          0.0
+        ],
+        "false_brake_per_frame": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  }
+}

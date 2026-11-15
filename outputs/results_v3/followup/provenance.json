@@ -1,0 +1,24 @@
+{
+  "active_checkpoint": "runs\\detect\\outputs\\training\\guardian_yolo11n-3\\weights\\best.pt",
+  "active_checkpoint_run": "guardian_yolo11n-3",
+  "active_checkpoint_args": "runs\\detect\\outputs\\training\\guardian_yolo11n-3\\args.yaml",
+  "pretrained_checkpoint": "yolo11n.pt",
+  "data_yaml": "dataset\\yolo\\carla.yaml",
+  "split": "dataset/yolo/test.txt; 994 frames; sequence-disjoint test split",
+  "fixed_inference": {
+    "imgsz": 1280,
+    "confidence": 0.25,
+    "iou": 0.5
+  },
+  "older_numbers": {
+    "map50": 0.9196,
+    "map50_95": 0.6195,
+    "status": "SUPERSEDED pending provenance; do not compare as current test result unless its original split/checkpoint is reproduced"
+  },
+  "current_numbers": {
+    "map50": 0.85298,
+    "map50_95": 0.58323,
+    "source": "outputs/results_v3/ultralytics_val_metrics.json"
+  },
+  "training_frame_ids_used_for_geometry_fit": 5260
+}

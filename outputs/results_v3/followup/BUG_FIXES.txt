@@ -1,0 +1,7 @@
+Follow-up bug fixes and protocol corrections
+1. Provenance is recorded for the active YAML, test manifest, and guardian_yolo11n-3 checkpoint.
+2. Paired distance metrics use only GT pedestrians matched independently by both models.
+3. Distance-bin matched pairs are assigned by ground-truth distance exactly once; unmatched predictions are reported separately by predicted distance.
+4. Critical-zone denominators and numerators are printed for all pedestrians and the 2.0 m corridor, with sequence-bootstrap confidence intervals available from the source reports.
+5. A clipped-ground-truth matching pass and 30 annotated worst misses were added without changing source labels or checkpoints.
+6. Geometry calibration is fit from training labels only and evaluated on the test split.

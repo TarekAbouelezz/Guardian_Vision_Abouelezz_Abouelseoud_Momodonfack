@@ -1,0 +1,22 @@
+BUG FIXES AND SCOPE NOTES
+
+1. Prior full-dataset audit and corridor diagnosis outputs are explicitly annotated:
+   ALL 6,567 FRAMES, INCLUDES TRAINING DATA: not a generalisation result.
+2. Test manifests contained absolute paths from another checkout. v3 resolves frame IDs
+   against the current dataset/images directory and verifies exactly 994 test frames.
+3. v3 uses the same confidence threshold (0.25), imgsz (1280), IoU threshold (0.5),
+   confidence-ordered one-to-one matching, and geometric depth for both checkpoints.
+4. Corridor evaluation now filters both ground truth and predictions by the predicted
+   2.0 m lateral / 30 m forward corridor before calculating precision and recall.
+5. Distance-bin evaluation now filters predictions by predicted geometric distance as
+   well as filtering ground truth, so bin precision/recall denominators are consistent.
+6. Existing checkpoints were loaded for inference only. No --train command was run and
+   no checkpoint was modified.
+7. Ultralytics model.val(split=test) artifacts were copied into this v3 directory;
+   prior outputs were not deleted or overwritten.
+
+INTERPRETATION
+
+The custom geometric-distance metrics are not the same metric definition as
+Ultralytics' confidence-swept mAP. Use the Ultralytics values for mAP50/mAP50-95
+and the custom reports for fixed-threshold safety/corridor/distance analysis.

@@ -1,0 +1,9 @@
+{
+  "scope": "TEST ONLY",
+  "frames": 994,
+  "warning": "All 6,567-frame audits include training data and are not generalisation results.",
+  "confidence_selection": "0.25 carried forward from validation audit; no test tuning.",
+  "matching": "confidence-ordered one-to-one IoU >= 0.5",
+  "depth": "geometric Z = 621 * 1.7 / predicted_bbox_height_px",
+  "checkpoints_unchanged": true
+}

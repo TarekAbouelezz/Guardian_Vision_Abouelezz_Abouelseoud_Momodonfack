@@ -1,0 +1,2 @@
+empty_frames,empty_frames_with_false_alarm_percent,false_positives,false_positives_per_empty_frame,frame_precision,frame_recall,frame_specificity,view
+1862,0.966702470461869,22,0.011815252416756176,0.9953307392996109,0.8155154091392136,0.9903329752953813,empty_frames

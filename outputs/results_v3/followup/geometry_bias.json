@@ -1,0 +1,48 @@
+{
+  "training_label_count": 7479,
+  "training_real_height_m": {
+    "mean": 1.7749939831528276,
+    "median": 1.86,
+    "count": 7479,
+    "source": "KITTI/CARLA pedestrian height field"
+  },
+  "training_box_height_times_distance_over_fy_m": {
+    "mean": 1.8019084459998462,
+    "median": 1.8760370370370374,
+    "count": 7479
+  },
+  "training_box_height_to_projected_silhouette_ratio": {
+    "mean": 1.0156987730873677,
+    "median": 1.0102657004830915,
+    "count": 7479
+  },
+  "learned_height_m": 1.8760370370370374,
+  "test_affine_correction": {
+    "a": 0.853564807342058,
+    "b_m": 3.9780646712025285,
+    "fit_source": "TRAIN labels only (reported for transparency; coefficients evaluated on TEST matched predictions)"
+  },
+  "test_geometric_re_evaluation_finetuned": {
+    "fixed_1.7m": {
+      "count": 1516,
+      "mae_m": 3.400756671750405,
+      "absrel": 0.15178284548686058,
+      "bias_m": -0.6908021468515079,
+      "median_error_m": -1.6530541454895342
+    },
+    "learned_height": {
+      "count": 1516,
+      "mae_m": 2.490418225702719,
+      "absrel": 0.11859784283384257,
+      "bias_m": 1.6484456473718914,
+      "median_error_m": 0.013900742947932088
+    },
+    "affine": {
+      "count": 1516,
+      "mae_m": 3.5657927996479937,
+      "absrel": 0.19660543776963638,
+      "bias_m": -0.02074556427914656,
+      "median_error_m": -0.4693913918972594
+    }
+  }
+}

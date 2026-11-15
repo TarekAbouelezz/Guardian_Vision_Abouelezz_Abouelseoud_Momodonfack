@@ -1,0 +1,130 @@
+{
+  "pretrained": {
+    "all_pedestrians": {
+      "critical_recall": {
+        "detected": 88,
+        "denominator": 160,
+        "value": 0.55
+      },
+      "false_brake_per_object": {
+        "false_brake_objects": 35,
+        "predicted_critical_objects": 123,
+        "value": 0.2845528455284553
+      },
+      "false_brake_per_frame": {
+        "false_brake_frames": 10,
+        "frames": 994,
+        "value": 0.01006036217303823
+      },
+      "bootstrap_95_ci": {
+        "critical_recall": [
+          0.3583269650655022,
+          0.7805011572013529
+        ],
+        "false_brake_per_object": [
+          0.2099969135802469,
+          0.3604812661498707
+        ],
+        "false_brake_per_frame": [
+          0.004094061157125126,
+          0.016765881023488576
+        ]
+      }
+    },
+    "corridor_2.0m": {
+      "critical_recall": {
+        "detected": 23,
+        "denominator": 54,
+        "value": 0.42592592592592593
+      },
+      "false_brake_per_object": {
+        "false_brake_objects": 18,
+        "predicted_critical_objects": 41,
+        "value": 0.43902439024390244
+      },
+      "false_brake_per_frame": {
+        "false_brake_frames": 9,
+        "frames": 994,
+        "value": 0.009054325955734407
+      },
+      "bootstrap_95_ci": {
+        "critical_recall": [
+          0.0,
+          0.75
+        ],
+        "false_brake_per_object": [
+          0.2,
+          1.0
+        ],
+        "false_brake_per_frame": [
+          0.0011543074615022846,
+          0.01771543279254424
+        ]
+      }
+    }
+  },
+  "finetuned_best": {
+    "all_pedestrians": {
+      "critical_recall": {
+        "detected": 96,
+        "denominator": 160,
+        "value": 0.6
+      },
+      "false_brake_per_object": {
+        "false_brake_objects": 42,
+        "predicted_critical_objects": 138,
+        "value": 0.30434782608695654
+      },
+      "false_brake_per_frame": {
+        "false_brake_frames": 21,
+        "frames": 994,
+        "value": 0.02112676056338028
+      },
+      "bootstrap_95_ci": {
+        "critical_recall": [
+          0.3893682399213373,
+          0.8507462686567164
+        ],
+        "false_brake_per_object": [
+          0.24,
+          0.3864267676767673
+        ],
+        "false_brake_per_frame": [
+          0.012545263441534952,
+          0.030025104338890097
+        ]
+      }
+    },
+    "corridor_2.0m": {
+      "critical_recall": {
+        "detected": 28,
+        "denominator": 54,
+        "value": 0.5185185185185185
+      },
+      "false_brake_per_object": {
+        "false_brake_objects": 22,
+        "predicted_critical_objects": 50,
+        "value": 0.44
+      },
+      "false_brake_per_frame": {
+        "false_brake_frames": 14,
+        "frames": 994,
+        "value": 0.014084507042253521
+      },
+      "bootstrap_95_ci": {
+        "critical_recall": [
+          0.0,
+          0.875
+        ],
+        "false_brake_per_object": [
+          0.2222222222222222,
+          1.0
+        ],
+        "false_brake_per_frame": [
+          0.0046937438584998365,
+          0.024495738056830085
+        ]
+      }
+    }
+  }
+}

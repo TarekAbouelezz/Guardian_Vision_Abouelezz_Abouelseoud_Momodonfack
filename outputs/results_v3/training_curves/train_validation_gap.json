@@ -1,0 +1,8 @@
+{
+  "best_epoch_by_val_mAP50": 22,
+  "best_val_mAP50": 0.93874,
+  "best_val_mAP50_95": 0.62848,
+  "final_train_box_loss": 0.63443,
+  "final_val_box_loss": 0.83955,
+  "final_box_loss_gap_val_minus_train": 0.20511999999999997
+}

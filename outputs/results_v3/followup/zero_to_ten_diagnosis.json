@@ -1,0 +1,42 @@
+{
+  "zero_to_ten_misses": {
+    "misses": 58,
+    "truncation_0.77": 1,
+    "occlusion_1": 21,
+    "extends_past_image_border": 35,
+    "overlap_with_other_pedestrian": 42,
+    "truncation_0.45": 1,
+    "truncation_0.75": 1,
+    "truncation_0.0": 23,
+    "truncation_0.44": 1,
+    "occlusion_0": 16,
+    "truncation_0.55": 2,
+    "truncation_0.74": 1,
+    "truncation_0.6": 2,
+    "truncation_0.48": 1,
+    "occlusion_2": 21,
+    "truncation_0.03": 2,
+    "truncation_0.49": 1,
+    "truncation_0.01": 2,
+    "truncation_0.05": 1,
+    "truncation_0.08": 5,
+    "truncation_0.2": 1,
+    "truncation_0.1": 2,
+    "truncation_0.12": 1,
+    "truncation_0.16": 1,
+    "truncation_0.06": 1,
+    "truncation_0.25": 1,
+    "truncation_0.32": 1,
+    "truncation_0.63": 1,
+    "truncation_0.62": 2,
+    "truncation_0.31": 1,
+    "truncation_0.57": 1,
+    "truncation_0.58": 1
+  },
+  "clip_to_image_matching": {
+    "matched": 1528,
+    "unmatched": 264
+  },
+  "saved_worst_misses": 30,
+  "note": "Red boxes are ground truth; green boxes are predictions from the fine-tuned model."
+}

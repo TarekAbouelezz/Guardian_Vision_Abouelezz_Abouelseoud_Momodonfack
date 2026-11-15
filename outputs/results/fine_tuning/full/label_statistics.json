@@ -1,0 +1,39 @@
+{
+  "object_counts_by_type": {
+    "Pedestrian": 9573,
+    "Car": 1755
+  },
+  "pedestrian_count": 9573,
+  "zero_or_negative_size_boxes": 0,
+  "near_zero_boxes_lt_1px": 0,
+  "duplicate_frames_iou_gt_0.9": 1,
+  "duplicate_pairs_iou_gt_0.9": 1,
+  "pedestrian_distance_m": {
+    "count": 9573,
+    "min": 1.44,
+    "p25": 11.74,
+    "median": 23.79,
+    "mean": 23.963520317559805,
+    "p75": 34.13,
+    "max": 49.99
+  },
+  "pedestrian_box_height_px": {
+    "count": 9573,
+    "min": 13.840000000000003,
+    "p25": 31.869999999999976,
+    "median": 47.00999999999999,
+    "mean": 75.12950903582993,
+    "p75": 94.59999999999997,
+    "max": 928.81
+  },
+  "pedestrian_occlusion": {
+    "0": 8142,
+    "2": 288,
+    "1": 1143
+  },
+  "walker_provenance": {
+    "controller_ai_walker_in_collector": true,
+    "label_level_provenance_available": false,
+    "evidence": "collect_data.py spawns walker.pedestrian.* actors and controller.ai.walker controllers; labels contain projected boxes but no actor provenance field."
+  }
+}

@@ -1,0 +1,15 @@
+detected_iou_0.5,dimension,ground_truth_critical,level,recall,view,zone_correct_among_detected
+313,truncation,331,0,0.945619335347432,all_pedestrians,0.8722044728434505
+141,truncation,156,0<level<=0.15,0.9038461538461539,all_pedestrians,0.900709219858156
+350,truncation,403,>0.15,0.8684863523573201,all_pedestrians,0.9285714285714286
+752,occlusion,795,0,0.9459119496855346,all_pedestrians,0.9507978723404256
+49,occlusion,72,1,0.6805555555555556,all_pedestrians,0.14285714285714285
+3,occlusion,23,2,0.13043478260869565,all_pedestrians,1.0
+804,box_height_px,890,>=40,0.903370786516854,all_pedestrians,0.9017412935323383
+130,truncation,140,0,0.9285714285714286,primary_corridor,0.7923076923076923
+50,truncation,57,0<level<=0.15,0.8771929824561403,primary_corridor,0.9
+197,truncation,201,>0.15,0.9800995024875622,primary_corridor,0.9644670050761421
+355,occlusion,360,0,0.9861111111111112,primary_corridor,0.9492957746478873
+22,occlusion,32,1,0.6875,primary_corridor,0.045454545454545456
+0,occlusion,6,2,0.0,primary_corridor,0.0
+377,box_height_px,398,>=40,0.9472361809045227,primary_corridor,0.896551724137931

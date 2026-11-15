@@ -1,0 +1,27 @@
+{
+  "ground_truth_bin_matched_pairs": {
+    "30_plus": {
+      "tp": 464,
+      "fn": 154
+    },
+    "20_30": {
+      "tp": 429,
+      "fn": 31
+    },
+    "10_20": {
+      "tp": 347,
+      "fn": 33
+    },
+    "0_10": {
+      "tp": 276,
+      "fn": 58
+    }
+  },
+  "unmatched_predictions_by_predicted_distance_bin": {
+    "30_plus": 23,
+    "20_30": 12,
+    "0_10": 13,
+    "10_20": 5
+  },
+  "protocol": "Each matched pair is assigned once using ground-truth distance; unmatched predictions are counted separately using predicted geometric distance."
+}

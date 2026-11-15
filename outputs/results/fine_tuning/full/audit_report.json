@@ -1,0 +1,289 @@
+{
+  "matching_setup": {
+    "iou_thresholds": [
+      0.3,
+      0.5
+    ],
+    "confidence_threshold": 0.25,
+    "imgsz": 1280,
+    "class_filter": "class_id == 0 (Pedestrian in yolo model)",
+    "matching": "confidence-ordered one-to-one; each prediction and GT can match at most once",
+    "geometric_depth": "Z = 621 * 1.7 / predicted_bbox_height_px",
+    "centre_variant": "predicted box centre inside GT box; one-to-one, confidence ordered"
+  },
+  "label_statistics": {
+    "object_counts_by_type": {
+      "Pedestrian": 9573,
+      "Car": 1755
+    },
+    "pedestrian_count": 9573,
+    "zero_or_negative_size_boxes": 0,
+    "near_zero_boxes_lt_1px": 0,
+    "duplicate_frames_iou_gt_0.9": 1,
+    "duplicate_pairs_iou_gt_0.9": 1,
+    "pedestrian_distance_m": {
+      "count": 9573,
+      "min": 1.44,
+      "p25": 11.74,
+      "median": 23.79,
+      "mean": 23.963520317559805,
+      "p75": 34.13,
+      "max": 49.99
+    },
+    "pedestrian_box_height_px": {
+      "count": 9573,
+      "min": 13.840000000000003,
+      "p25": 31.869999999999976,
+      "median": 47.00999999999999,
+      "mean": 75.12950903582993,
+      "p75": 94.59999999999997,
+      "max": 928.81
+    },
+    "pedestrian_occlusion": {
+      "0": 8142,
+      "2": 288,
+      "1": 1143
+    },
+    "walker_provenance": {
+      "controller_ai_walker_in_collector": true,
+      "label_level_provenance_available": false,
+      "evidence": "collect_data.py spawns walker.pedestrian.* actors and controller.ai.walker controllers; labels contain projected boxes but no actor provenance field."
+    }
+  },
+  "unfiltered_iou_0.5": {
+    "subset": "unfiltered",
+    "threshold": 0.5,
+    "matching": "iou",
+    "true_positives": 8743,
+    "false_positives": 490,
+    "false_negatives": 830,
+    "precision": 0.9469294920394238,
+    "recall": 0.9132978167763501,
+    "distance_mae_m": 3.3233876345202424
+  },
+  "matching_sweep": [
+    {
+      "subset": "unfiltered",
+      "threshold": 0.3,
+      "matching": "iou",
+      "true_positives": 8843,
+      "false_positives": 390,
+      "false_negatives": 730,
+      "precision": 0.9577602079497455,
+      "recall": 0.9237438629478743,
+      "distance_mae_m": 3.3351147814869107
+    },
+    {
+      "subset": "unfiltered",
+      "threshold": 0.5,
+      "matching": "iou",
+      "true_positives": 8743,
+      "false_positives": 490,
+      "false_negatives": 830,
+      "precision": 0.9469294920394238,
+      "recall": 0.9132978167763501,
+      "distance_mae_m": 3.3233876345202424
+    },
+    {
+      "subset": "unfiltered",
+      "threshold": 0.3,
+      "matching": "centre_inside",
+      "true_positives": 8860,
+      "false_positives": 373,
+      "false_negatives": 713,
+      "precision": 0.9596014296545001,
+      "recall": 0.9255196907970333,
+      "distance_mae_m": 3.3561907568453626
+    },
+    {
+      "subset": "unfiltered",
+      "threshold": 0.5,
+      "matching": "centre_inside",
+      "true_positives": 8860,
+      "false_positives": 373,
+      "false_negatives": 713,
+      "precision": 0.9596014296545001,
+      "recall": 0.9255196907970333,
+      "distance_mae_m": 3.3561907568453626
+    }
+  ],
+  "stratified_results": [
+    {
+      "subset": "0-10",
+      "threshold": 0.5,
+      "matching": "iou",
+      "true_positives": 1911,
+      "false_positives": 490,
+      "false_negatives": 121,
+      "precision": 0.7959183673469388,
+      "recall": 0.9404527559055118,
+      "distance_mae_m": 0.9843110538595036,
+      "dimension": "distance"
+    },
+    {
+      "subset": "10-20",
+      "threshold": 0.5,
+      "matching": "iou",
+      "true_positives": 1814,
+      "false_positives": 490,
+      "false_negatives": 72,
+      "precision": 0.7873263888888888,
+      "recall": 0.9618239660657476,
+      "distance_mae_m": 2.128694174907565,
+      "dimension": "distance"
+    },
+    {
+      "subset": "20-30",
+      "threshold": 0.5,
+      "matching": "iou",
+      "true_positives": 2205,
+      "false_positives": 490,
+      "false_negatives": 109,
+      "precision": 0.8181818181818182,
+      "recall": 0.952895419187554,
+      "distance_mae_m": 3.287288619268928,
+      "dimension": "distance"
+    },
+    {
+      "subset": "30+",
+      "threshold": 0.5,
+      "matching": "iou",
+      "true_positives": 2813,
+      "false_positives": 490,
+      "false_negatives": 528,
+      "precision": 0.8516500151377535,
+      "recall": 0.8419634839868303,
+      "distance_mae_m": 5.711140073201086,
+      "dimension": "distance"
+    },
+    {
+      "subset": "0",
+      "threshold": 0.5,
+      "matching": "iou",
+      "true_positives": 7743,
+      "false_positives": 490,
+      "false_negatives": 399,
+      "precision": 0.940483420381392,
+      "recall": 0.9509948415622698,
+      "distance_mae_m": 2.4717408048724296,
+      "dimension": "occlusion"
+    },
+    {
+      "subset": "1",
+      "threshold": 0.5,
+      "matching": "iou",
+      "true_positives": 899,
+      "false_positives": 490,
+      "false_negatives": 244,
+      "precision": 0.6472282217422606,
+      "recall": 0.7865266841644795,
+      "distance_mae_m": 10.415562684097106,
+      "dimension": "occlusion"
+    },
+    {
+      "subset": "2",
+      "threshold": 0.5,
+      "matching": "iou",
+      "true_positives": 101,
+      "false_positives": 490,
+      "false_negatives": 187,
+      "precision": 0.17089678510998307,
+      "recall": 0.3506944444444444,
+      "distance_mae_m": 5.486120628514461,
+      "dimension": "occlusion"
+    },
+    {
+      "subset": "3+",
+      "threshold": 0.5,
+      "matching": "iou",
+      "true_positives": 0,
+      "false_positives": 490,
+      "false_negatives": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "distance_mae_m": NaN,
+      "dimension": "occlusion"
+    },
+    {
+      "subset": "<25",
+      "threshold": 0.5,
+      "matching": "iou",
+      "true_positives": 639,
+      "false_positives": 490,
+      "false_negatives": 257,
+      "precision": 0.5659875996457041,
+      "recall": 0.7131696428571429,
+      "distance_mae_m": 12.393947451895414,
+      "dimension": "height"
+    },
+    {
+      "subset": "25-40",
+      "threshold": 0.5,
+      "matching": "iou",
+      "true_positives": 2639,
+      "false_positives": 490,
+      "false_negatives": 310,
+      "precision": 0.843400447427293,
+      "recall": 0.8948796202102408,
+      "distance_mae_m": 4.363142899003981,
+      "dimension": "height"
+    },
+    {
+      "subset": ">=40",
+      "threshold": 0.5,
+      "matching": "iou",
+      "true_positives": 5465,
+      "false_positives": 490,
+      "false_negatives": 263,
+      "precision": 0.9177162048698573,
+      "recall": 0.9540851955307262,
+      "distance_mae_m": 1.7607157468211896,
+      "dimension": "height"
+    }
+  ],
+  "difficulty_results": [
+    {
+      "subset": "easy",
+      "threshold": 0.5,
+      "matching": "iou",
+      "true_positives": 5118,
+      "false_positives": 490,
+      "false_negatives": 106,
+      "precision": 0.9126248216833096,
+      "recall": 0.9797090352220521,
+      "distance_mae_m": 1.5885611848916632
+    },
+    {
+      "subset": "moderate",
+      "threshold": 0.5,
+      "matching": "iou",
+      "true_positives": 8015,
+      "false_positives": 490,
+      "false_negatives": 407,
+      "precision": 0.9423868312757202,
+      "recall": 0.9516741866540014,
+      "distance_mae_m": 2.589244074159325
+    },
+    {
+      "subset": "hard",
+      "threshold": 0.5,
+      "matching": "iou",
+      "true_positives": 8104,
+      "false_positives": 490,
+      "false_negatives": 573,
+      "precision": 0.9429834768443099,
+      "recall": 0.9339633513887288,
+      "distance_mae_m": 2.608174440627999
+    }
+  ],
+  "critical_metrics_all_ground_truth": {
+    "critical_ground_truth_objects": 890,
+    "critical_zone_recall": 0.8146067415730337,
+    "noncritical_ground_truth_objects": 8683,
+    "false_brake_rate_per_object": 0.03881147068985374,
+    "noncritical_frames": 5780,
+    "false_brake_rate_per_frame": 0.04671280276816609
+  },
+  "mean_inference_ms": 58.31771329470326,
+  "images": 6567
+}

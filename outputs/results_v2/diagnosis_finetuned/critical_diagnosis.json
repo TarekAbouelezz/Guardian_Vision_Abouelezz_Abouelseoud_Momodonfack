@@ -1,0 +1,379 @@
+{
+  "matching_setup": {
+    "confidence_threshold": 0.25,
+    "imgsz": 1280,
+    "class_filter": "class_id == 0",
+    "iou_threshold": 0.5,
+    "matching_v2": "confidence-ordered one-to-one",
+    "matching_v1": "ground-truth-ordered one-to-one",
+    "geometric_depth": "Z = 621 * 1.7 / predicted box height",
+    "critical_threshold_m": 7.0,
+    "primary_corridor": "|GT lateral| <= 2.0 m and GT forward <= 30 m",
+    "predicted_corridor": "|(u-cx)*Z/fx| <= 2.0 m and Z <= 30 m"
+  },
+  "v1_explanation": {
+    "formula": "matched critical GT predicted critical / matched critical GT",
+    "why_90_71_percent": "The original v1 zone_rows contained only IoU-matched objects, so missed critical pedestrians were absent from the denominator.",
+    "v1_like_recomputed": {
+      "ground_truth_critical": 890,
+      "critical_detected_iou_0.5": 807,
+      "detection_fraction": 0.9067415730337078,
+      "critical_zone_correct": 728,
+      "zone_correct_rate_among_detected": 0.9021065675340768,
+      "critical_recall": 0.8179775280898877,
+      "matched_pairs": 8744,
+      "predictions_in_view": 9233,
+      "false_positives_in_view": 489,
+      "precision": 0.947037799198527,
+      "zone_confusion_detected_pairs": {
+        "critical_danger->critical_danger": 728,
+        "critical_danger->warning": 79,
+        "monitoring->monitoring": 5674,
+        "monitoring->warning": 233,
+        "warning->critical_danger": 343,
+        "warning->monitoring": 114,
+        "warning->warning": 1573
+      },
+      "distance_error_border_mae_m": 0.9473310417086268,
+      "distance_error_nonborder_mae_m": 3.4882648640483978,
+      "border_matched_count": 532,
+      "nonborder_matched_count": 8212
+    }
+  },
+  "decomposition": {
+    "all_pedestrians": {
+      "ground_truth_critical": 890,
+      "critical_detected_iou_0.5": 804,
+      "detection_fraction": 0.903370786516854,
+      "critical_zone_correct": 725,
+      "zone_correct_rate_among_detected": 0.9017412935323383,
+      "critical_recall": 0.8146067415730337,
+      "matched_pairs": 8743,
+      "predictions_in_view": 9233,
+      "false_positives_in_view": 490,
+      "precision": 0.9469294920394238,
+      "zone_confusion_detected_pairs": {
+        "critical_danger->critical_danger": 725,
+        "critical_danger->warning": 79,
+        "monitoring->monitoring": 5674,
+        "monitoring->warning": 231,
+        "warning->critical_danger": 344,
+        "warning->monitoring": 114,
+        "warning->warning": 1576
+      },
+      "distance_error_border_mae_m": 0.9435386966732793,
+      "distance_error_nonborder_mae_m": 3.4775807455827907,
+      "border_matched_count": 532,
+      "nonborder_matched_count": 8211
+    },
+    "primary_corridor_ground_truth": {
+      "ground_truth_critical": 398,
+      "critical_detected_iou_0.5": 377,
+      "detection_fraction": 0.9472361809045227,
+      "critical_zone_correct": 338,
+      "zone_correct_rate_among_detected": 0.896551724137931,
+      "critical_recall": 0.8492462311557789,
+      "matched_pairs": 1620,
+      "predictions_in_view": 9233,
+      "false_positives_in_view": 490,
+      "precision": 0.7677725118483413,
+      "zone_confusion_detected_pairs": {
+        "critical_danger->critical_danger": 338,
+        "critical_danger->warning": 39,
+        "monitoring->monitoring": 267,
+        "monitoring->warning": 42,
+        "warning->critical_danger": 179,
+        "warning->monitoring": 19,
+        "warning->warning": 736
+      },
+      "distance_error_border_mae_m": 0.6878472652202379,
+      "distance_error_nonborder_mae_m": 1.5222567850816031,
+      "border_matched_count": 247,
+      "nonborder_matched_count": 1373
+    },
+    "primary_corridor_ground_truth_and_prediction": {
+      "ground_truth_critical": 398,
+      "critical_detected_iou_0.5": 336,
+      "detection_fraction": 0.8442211055276382,
+      "critical_zone_correct": 312,
+      "zone_correct_rate_among_detected": 0.9285714285714286,
+      "critical_recall": 0.7839195979899497,
+      "matched_pairs": 1535,
+      "predictions_in_view": 1740,
+      "false_positives_in_view": 38,
+      "precision": 0.9758423394787031,
+      "zone_confusion_detected_pairs": {
+        "critical_danger->critical_danger": 312,
+        "critical_danger->warning": 24,
+        "monitoring->monitoring": 243,
+        "monitoring->warning": 42,
+        "warning->critical_danger": 179,
+        "warning->monitoring": 11,
+        "warning->warning": 724
+      },
+      "distance_error_border_mae_m": 0.5830494764485858,
+      "distance_error_nonborder_mae_m": 1.3408164149916009,
+      "border_matched_count": 215,
+      "nonborder_matched_count": 1320
+    }
+  },
+  "stratified_critical_ground_truth": [
+    {
+      "view": "all_pedestrians",
+      "dimension": "truncation",
+      "level": "0",
+      "ground_truth_critical": 331,
+      "detected_iou_0.5": 313,
+      "recall": 0.945619335347432,
+      "zone_correct_among_detected": 0.8722044728434505
+    },
+    {
+      "view": "all_pedestrians",
+      "dimension": "truncation",
+      "level": "0<level<=0.15",
+      "ground_truth_critical": 156,
+      "detected_iou_0.5": 141,
+      "recall": 0.9038461538461539,
+      "zone_correct_among_detected": 0.900709219858156
+    },
+    {
+      "view": "all_pedestrians",
+      "dimension": "truncation",
+      "level": ">0.15",
+      "ground_truth_critical": 403,
+      "detected_iou_0.5": 350,
+      "recall": 0.8684863523573201,
+      "zone_correct_among_detected": 0.9285714285714286
+    },
+    {
+      "view": "all_pedestrians",
+      "dimension": "occlusion",
+      "level": "0",
+      "ground_truth_critical": 795,
+      "detected_iou_0.5": 752,
+      "recall": 0.9459119496855346,
+      "zone_correct_among_detected": 0.9507978723404256
+    },
+    {
+      "view": "all_pedestrians",
+      "dimension": "occlusion",
+      "level": "1",
+      "ground_truth_critical": 72,
+      "detected_iou_0.5": 49,
+      "recall": 0.6805555555555556,
+      "zone_correct_among_detected": 0.14285714285714285
+    },
+    {
+      "view": "all_pedestrians",
+      "dimension": "occlusion",
+      "level": "2",
+      "ground_truth_critical": 23,
+      "detected_iou_0.5": 3,
+      "recall": 0.13043478260869565,
+      "zone_correct_among_detected": 1.0
+    },
+    {
+      "view": "all_pedestrians",
+      "dimension": "box_height_px",
+      "level": ">=40",
+      "ground_truth_critical": 890,
+      "detected_iou_0.5": 804,
+      "recall": 0.903370786516854,
+      "zone_correct_among_detected": 0.9017412935323383
+    },
+    {
+      "view": "primary_corridor",
+      "dimension": "truncation",
+      "level": "0",
+      "ground_truth_critical": 140,
+      "detected_iou_0.5": 130,
+      "recall": 0.9285714285714286,
+      "zone_correct_among_detected": 0.7923076923076923
+    },
+    {
+      "view": "primary_corridor",
+      "dimension": "truncation",
+      "level": "0<level<=0.15",
+      "ground_truth_critical": 57,
+      "detected_iou_0.5": 50,
+      "recall": 0.8771929824561403,
+      "zone_correct_among_detected": 0.9
+    },
+    {
+      "view": "primary_corridor",
+      "dimension": "truncation",
+      "level": ">0.15",
+      "ground_truth_critical": 201,
+      "detected_iou_0.5": 197,
+      "recall": 0.9800995024875622,
+      "zone_correct_among_detected": 0.9644670050761421
+    },
+    {
+      "view": "primary_corridor",
+      "dimension": "occlusion",
+      "level": "0",
+      "ground_truth_critical": 360,
+      "detected_iou_0.5": 355,
+      "recall": 0.9861111111111112,
+      "zone_correct_among_detected": 0.9492957746478873
+    },
+    {
+      "view": "primary_corridor",
+      "dimension": "occlusion",
+      "level": "1",
+      "ground_truth_critical": 32,
+      "detected_iou_0.5": 22,
+      "recall": 0.6875,
+      "zone_correct_among_detected": 0.045454545454545456
+    },
+    {
+      "view": "primary_corridor",
+      "dimension": "occlusion",
+      "level": "2",
+      "ground_truth_critical": 6,
+      "detected_iou_0.5": 0,
+      "recall": 0.0,
+      "zone_correct_among_detected": 0.0
+    },
+    {
+      "view": "primary_corridor",
+      "dimension": "box_height_px",
+      "level": ">=40",
+      "ground_truth_critical": 398,
+      "detected_iou_0.5": 377,
+      "recall": 0.9472361809045227,
+      "zone_correct_among_detected": 0.896551724137931
+    }
+  ],
+  "image_boundary": {
+    "boxes_outside_image": 643,
+    "overflow_by_side": {
+      "bottom_boxes": 545,
+      "bottom_pixels_total": 33868.18,
+      "bottom_pixels_max": 627.28,
+      "left_boxes": 93,
+      "left_pixels_total": 2464.4999999999995,
+      "left_pixels_max": 117.02,
+      "right_boxes": 59,
+      "right_pixels_total": 1604.4699999999998,
+      "right_pixels_max": 77.72000000000003
+    }
+  },
+  "clipped_matching_change": {
+    "all_pedestrians_unclipped": {
+      "ground_truth_critical": 890,
+      "critical_detected_iou_0.5": 804,
+      "detection_fraction": 0.903370786516854,
+      "critical_zone_correct": 725,
+      "zone_correct_rate_among_detected": 0.9017412935323383,
+      "critical_recall": 0.8146067415730337,
+      "matched_pairs": 8743,
+      "predictions_in_view": 9233,
+      "false_positives_in_view": 490,
+      "precision": 0.9469294920394238,
+      "zone_confusion_detected_pairs": {
+        "critical_danger->critical_danger": 725,
+        "critical_danger->warning": 79,
+        "monitoring->monitoring": 5674,
+        "monitoring->warning": 231,
+        "warning->critical_danger": 344,
+        "warning->monitoring": 114,
+        "warning->warning": 1576
+      },
+      "distance_error_border_mae_m": 0.9435386966732793,
+      "distance_error_nonborder_mae_m": 3.4775807455827907,
+      "border_matched_count": 532,
+      "nonborder_matched_count": 8211
+    },
+    "all_pedestrians_clipped": {
+      "ground_truth_critical": 890,
+      "critical_detected_iou_0.5": 847,
+      "detection_fraction": 0.9516853932584269,
+      "critical_zone_correct": 759,
+      "zone_correct_rate_among_detected": 0.8961038961038961,
+      "critical_recall": 0.852808988764045,
+      "matched_pairs": 8812,
+      "predictions_in_view": 9233,
+      "false_positives_in_view": 421,
+      "precision": 0.9544026860175457,
+      "zone_confusion_detected_pairs": {
+        "critical_danger->critical_danger": 759,
+        "critical_danger->warning": 88,
+        "monitoring->monitoring": 5682,
+        "monitoring->warning": 231,
+        "warning->critical_danger": 351,
+        "warning->monitoring": 117,
+        "warning->warning": 1584
+      },
+      "distance_error_border_mae_m": 1.080685563669073,
+      "distance_error_nonborder_mae_m": 3.4775807455827907,
+      "border_matched_count": 601,
+      "nonborder_matched_count": 8211
+    },
+    "primary_corridor_unclipped": {
+      "ground_truth_critical": 398,
+      "critical_detected_iou_0.5": 377,
+      "detection_fraction": 0.9472361809045227,
+      "critical_zone_correct": 338,
+      "zone_correct_rate_among_detected": 0.896551724137931,
+      "critical_recall": 0.8492462311557789,
+      "matched_pairs": 1620,
+      "predictions_in_view": 9233,
+      "false_positives_in_view": 490,
+      "precision": 0.7677725118483413,
+      "zone_confusion_detected_pairs": {
+        "critical_danger->critical_danger": 338,
+        "critical_danger->warning": 39,
+        "monitoring->monitoring": 267,
+        "monitoring->warning": 42,
+        "warning->critical_danger": 179,
+        "warning->monitoring": 19,
+        "warning->warning": 736
+      },
+      "distance_error_border_mae_m": 0.6878472652202379,
+      "distance_error_nonborder_mae_m": 1.5222567850816031,
+      "border_matched_count": 247,
+      "nonborder_matched_count": 1373
+    },
+    "primary_corridor_clipped": {
+      "ground_truth_critical": 398,
+      "critical_detected_iou_0.5": 380,
+      "detection_fraction": 0.9547738693467337,
+      "critical_zone_correct": 339,
+      "zone_correct_rate_among_detected": 0.8921052631578947,
+      "critical_recall": 0.8517587939698492,
+      "matched_pairs": 1623,
+      "predictions_in_view": 9233,
+      "false_positives_in_view": 421,
+      "precision": 0.7940313111545988,
+      "zone_confusion_detected_pairs": {
+        "critical_danger->critical_danger": 339,
+        "critical_danger->warning": 41,
+        "monitoring->monitoring": 267,
+        "monitoring->warning": 42,
+        "warning->critical_danger": 179,
+        "warning->monitoring": 19,
+        "warning->warning": 736
+      },
+      "distance_error_border_mae_m": 0.7370977555028512,
+      "distance_error_nonborder_mae_m": 1.5222567850816031,
+      "border_matched_count": 250,
+      "nonborder_matched_count": 1373
+    }
+  },
+  "v1_v2_difference": {
+    "explanation": "v1 matched each ground-truth box to its best unused prediction in GT order; v2 matches predictions in descending confidence order. The three-object count difference comes from these competing one-to-one assignments, not from changed weights or thresholds.",
+    "v1_counts": {
+      "tp": 5538,
+      "fp": 1332,
+      "fn": 4035,
+      "precision": 0.8061
+    },
+    "v2_counts": {
+      "tp": 5535,
+      "fp": 1335,
+      "fn": 4038,
+      "precision": 0.8056768558951966
+    }
+  }
+}
