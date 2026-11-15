@@ -66,7 +66,7 @@ Sample images define the expected output of the system, including cases it does 
 | `000013` | Clear day, very small pedestrian | about 43 m | Monitoring (hard case for detection) |
 
 ```markdown
-![Night, critical](docs/images/006555_guardian.jpg)
+![Night, critical](docs/images/006556.png)
 ```
 
 A full-dataset annotated video (6,567 frames, 20 FPS) can be generated with `make_video.py` (see §6).
